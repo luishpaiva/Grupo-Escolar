@@ -1,32 +1,34 @@
-Projeto da disciplina de Fundamentos da ProgramaÁ„o Orientada a Objetos
+Projeto da disciplina de Fundamentos da Programa√ß√£o Orientada a Objetos
 
-Nesta atividade, equipes de dois a trÍs estudantes dever„o construir uma aplicaÁ„o em que sejam empregados os conceitos de persistÍncia de objetos, com utilizaÁ„o de interface gr·fica orientada a evento, heranÁa, polimorfismo e tratamento de exceÁ„o.
+Nesta atividade, equipes de dois a tr√™s estudantes dever√£o construir uma aplica√ß√£o em que sejam empregados os conceitos de persist√™ncia de objetos, com utiliza√ß√£o de interface gr√°fica orientada a evento, heran√ßa, polimorfismo e tratamento de exce√ß√£o.
 
 QUESITOS A SEREM AVALIADOS
 
-1.Modelagem de classes com heranÁa, realizada com o auxÌlio de ferramenta (PowerPoint ou Word,por exemplo).
-	a)Cada equipe deve definir sua organizaÁ„o prÛpria de classes com heranÁa, visando a aproveitar osrecursos do polimorfismo.
-	b)Com um domÌnio de aplicaÁ„o selecionado/definido, a equipe deve adaptar o exemplo dado (PetStore)para o domÌnio de aplicaÁ„o escolhido.
-	c)Sugestıes de classes possÌveis est„o disponibilizadas no fim deste documento.
+1. Modelagem de classes com heran√ßa, realizada com o aux√≠lio de ferramenta (PowerPoint ou Word,por exemplo).
+- a) Cada equipe deve definir sua organiza√ß√£o pr√≥pria de classes com heran√ßa, visando a aproveitar osrecursos do polimorfismo.
+- b) Com um dom√≠nio de aplica√ß√£o selecionado/definido, a equipe deve adaptar o exemplo dado (PetStore)para o dom√≠nio de aplica√ß√£o escolhido.
+- c) Sugest√µes de classes poss√≠veis est√£o disponibilizadas no fim deste documento.
 2. Polimorfismo entre classes.
-	d) Sobrescrita (@override) de mÈtodos.
-	e) ReferÍncias polimÛrficas.
-	f) Controle de repetiÁ„o usado em coleÁ„o de objetos (ArrayList).
-3. GravaÁ„o e recuperaÁ„o de objetos em arquivo.
-4. UtilizaÁ„o da estrutura switch para controle de menu de opÁıes.
-5. UtilizaÁ„o de tratamento de exceÁıes para manipulaÁ„o de arquivos.
+- d) Sobrescrita (@override) de m√©todos.
+- e) Refer√™ncias polim√≥rficas.
+- f) Controle de repeti√ß√£o usado em cole√ß√£o de objetos (ArrayList).
+3. Grava√ß√£o e recupera√ß√£o de objetos em arquivo.
+4. Utiliza√ß√£o da estrutura switch para controle de menu de op√ß√µes.
+5. Utiliza√ß√£o de tratamento de exce√ß√µes para manipula√ß√£o de arquivos.
 
-ORIENTA«’ES GERAIS
+ORIENTA√á√ïES GERAIS
 
-Com base no exemplo (arquivo PetSore.ZIP), as equipes dever„o utilizar os recursos a seguir, como apresentado ou de forma equivalente, desde que todos os componentes da equipe demonstrem conhecimento desses recursos.
+Com base no exemplo (arquivo PetSore.ZIP), as equipes dever√£o utilizar os recursos a seguir, como apresentado ou de forma equivalente, desde que todos os componentes da equipe demonstrem conhecimento desses recursos.
 
 Lista
-	Usar estrutura de ArrayList para manter em memÛria, semelhante ‡ utilizada no exemplo com a coleÁ„o de objetos mamÌferos de PetStore:
+
+- Usar estrutura de ArrayList para manter em mem√≥ria, semelhante √† utilizada no exemplo com a cole√ß√£o de objetos mam√≠feros de PetStore:
 
 ArrayList<Mamifero> mamiferos = new ArrayList<Mamifero>();
 
-Menu (no exemplo, para manipulaÁ„o das operaÁıes da PetStore)
-	Usar estrutura de controle switch
+Menu (no exemplo, para manipula√ß√£o das opera√ß√µes da PetStore)
+
+- Usar estrutura de controle switch
 
 ...
 switch (opc1) {
@@ -44,94 +46,95 @@ switch (opc1) {
 ...
 
 Sobrescrita (@override)
-	Usar no mÈtodo toString(), aproveitando o mÈtodo da classe-m„e, por meio da chamada super.
-	Usar em mÈtodos construtores (encadeamento de construtores).
+- Usar no m√©todo toString(), aproveitando o m√©todo da classe-m√£e, por meio da chamada super.
+- Usar em m√©todos construtores (encadeamento de construtores).
 
-PersistÍncia de objetos: observem os detalhes de implementaÁ„o usados no exemplo.
-	Objetos a serem persistidos (armazenados em arquivo) devem implementar a interface. java.io.Serializable
-	GravaÁ„o (void salvaProdutos (ArrayList<Mamifero> mamiferos):
+Persist√™ncia de objetos: observem os detalhes de implementa√ß√£o usados no exemplo.
+- Objetos a serem persistidos (armazenados em arquivo) devem implementar a interface. java.io.Serializable
+- Grava√ß√£o (void salvaProdutos (ArrayList<Mamifero> mamiferos):
 
 	outputStream = new ObjectOutputStream
 		(new FileOutputStream(nomeArquivo));
 
-RecuperaÁ„o (ArrayList<Mamifero> recuperaProdutos ()):
+- Recupera√ß√£o (ArrayList<Mamifero> recuperaProdutos ()):
+
 	inputStream = new ObjectInputStream
 		(new FileInputStream(nomeArquivo));
 
-Itens esperados na aplicaÁ„o
+ITENS ESPERADOS NA APLICA√á√ÉO
 
-	1. Cada equipe dever· ter seu conjunto prÛprio de objetos (domÌnio de aplicaÁ„o), que dever„o ser persistidos e recuperados, conforme escolha do usu·rio em menu de opÁıes.
-	2. O conjunto de objetos dever· trabalhar a generalizaÁ„o com hierarquia, para aproveitamento das facilidades do polimorfismo (referÍncia polimÛrfica em coleÁ„o de objetos, como ArrayList, para manter coleÁıes de objetos com as mesmas relaÁıes hier·rquicas).
-	3. A aplicaÁ„o dever· utilizar interface gr·fica, conforme exemplificado (arquivo PetSore.ZIP).
-	4. A aplicaÁ„o dever· ter tratamento de exceÁ„o para acesso a arquivos e para tratamento de demais erros em potencial.
-	5. A aplicaÁ„o dever· ter tratamento de opÁıes para o usu·rio via menu.
-	6. Utilizar construtores adequadamente: reutilizar o construtor da classe-pai, sempre que possÌvel.
-	7. Utilizar getter e setter para prover encapsulamento, sempre que possÌvel.
-	8. Utilizar o mÈtodo toString()para apresentar objetos ao usu·rio.
+- 1. Cada equipe dever√° ter seu conjunto pr√≥prio de objetos (dom√≠nio de aplica√ß√£o), que dever√£o ser persistidos e recuperados, conforme escolha do usu√°rio em menu de op√ß√µes.
+- 2. O conjunto de objetos dever√° trabalhar a generaliza√ß√£o com hierarquia, para aproveitamento das facilidades do polimorfismo (refer√™ncia polim√≥rfica em cole√ß√£o de objetos, como ArrayList, para manter cole√ß√µes de objetos com as mesmas rela√ß√µes hier√°rquicas).
+- 3. A aplica√ß√£o dever√° utilizar interface gr√°fica, conforme exemplificado (arquivo PetSore.ZIP).
+- 4. A aplica√ß√£o dever√° ter tratamento de exce√ß√£o para acesso a arquivos e para tratamento de demais erros em potencial.
+- 5. A aplica√ß√£o dever√° ter tratamento de op√ß√µes para o usu√°rio via menu.
+- 6. Utilizar construtores adequadamente: reutilizar o construtor da classe-pai, sempre que poss√≠vel.
+- 7. Utilizar getter e setter para prover encapsulamento, sempre que poss√≠vel.
+- 8. Utilizar o m√©todo toString()para apresentar objetos ao usu√°rio.
 
-ORIENTA«√O PARA IMPLEMENTA«√O DA INTERFACE GR¡FICA
+ORIENTA√á√ÉO PARA IMPLEMENTA√á√ÉO DA INTERFACE GR√ÅFICA
 
 Seguir o modelo passado no exemplo da PetStore.
 
-SequÍncia de apresentaÁ„o das caixas de di·logo do programa ñ adaptar o domÌnio de aplicaÁ„o escolhido, conforme demonstrado nas telas do exemplo, a seguir.
+Sequ√™ncia de apresenta√ß√£o das caixas de di√°logo do programa ‚Äì adaptar o dom√≠nio de aplica√ß√£o escolhido, conforme demonstrado nas telas do exemplo, a seguir.
 
-	a) Entrar os dados de um c„o e de um gato.
-	b) Exibir a lista de mamÌferos.
-	c) Gravar os objetos criados em arquivo.
-	d) Limpar da memÛria (ArrayList) os objetos recÈm-criados.
-	e) Exibir novamente a lista de mamÌferos.
-	f) Recuperar os objetos persistidos.
-	g) Exibir novamente a lista de mamÌferos.
-	h) Sair do programa.
+- a) Entrar os dados de um c√£o e de um gato.
+- b) Exibir a lista de mam√≠feros.
+- c) Gravar os objetos criados em arquivo.
+- d) Limpar da mem√≥ria (ArrayList) os objetos rec√©m-criados.
+- e) Exibir novamente a lista de mam√≠feros.
+- f) Recuperar os objetos persistidos.
+- g) Exibir novamente a lista de mam√≠feros.
+- h) Sair do programa.
 
-SUGEST’ES DE DOMÕNIO DE APLICA«√O
+SUGEST√ïES DE DOM√çNIO DE APLICA√á√ÉO
 
-Seguem sugestıes para alteraÁ„o do domÌnio de aplicaÁ„o, para que as equipes alterem o exemplo dado. Caso prefiram, poder„o criar e utilizar seu prÛprio conjunto de objetos, desde que validado com o professor. Importante: garanta que as subclasses tenham mais um ou dois atributos, alÈm dos recebidos da heranÁa.
+Seguem sugest√µes para altera√ß√£o do dom√≠nio de aplica√ß√£o, para que as equipes alterem o exemplo dado. Caso prefiram, poder√£o criar e utilizar seu pr√≥prio conjunto de objetos, desde que validado com o professor. Importante: garanta que as subclasses tenham mais um ou dois atributos, al√©m dos recebidos da heran√ßa.
 
 Supermercado
-	Produto (cÛdigo, nome, fornecedor, categoria: limpeza, bebida ou laticÌnio)
-	Limpeza (tipo de limpeza: sab„o, desinfetante, detergente...)
-	Bebida (tipo de bebida: refrigerante, vinho, suco...)
-	LaticÌnio (tipo de laticÌnio: queijos, leites, iogurtes...)
+- Produto (c√≥digo, nome, fornecedor, categoria: limpeza, bebida ou latic√≠nio)
+	- Limpeza (tipo de limpeza: sab√£o, desinfetante, detergente...)
+	- Bebida (tipo de bebida: refrigerante, vinho, suco...)
+	- Latic√≠nio (tipo de latic√≠nio: queijos, leites, iogurtes...)
 
 Biblioteca
-	Livro (nome, ISBN, autor, resenha)
-		Livros infantis (brinde: boneco, l·pis de colorir, giz de cera...)
-		Livros de culin·ria (tipo de culin·ria: regional, internacional, doces, carnes...)
-		Guias de viagem (local: nome de paÌs, nome de regi„o em um paÌs, parques...)
+- Livro (nome, ISBN, autor, resenha)
+	- Livros infantis (brinde: boneco, l√°pis de colorir, giz de cera...)
+	- Livros de culin√°ria (tipo de culin√°ria: regional, internacional, doces, carnes...)
+	- Guias de viagem (local: nome de pa√≠s, nome de regi√£o em um pa√≠s, parques...)
 
-ClÌnica veterin·ria
-	Animal (nome, espÈcie, dono)
-		Cavalo (alimentaÁ„o: raÁ„o, aveia, alfafa...; cuidados prÛprios: corrida, trote, cascos...)
-		Cachorro (alimentaÁ„o: raÁ„o, carnes...; cuidados prÛprios: tosa, banho...)
-		P·ssaro (alimentaÁ„o: alpiste, frutas...; cuidados prÛprios: abrigo, estÌmulos...)
+Cl√≠nica veterin√°ria
+- Animal (nome, esp√©cie, dono)
+	- Cavalo (alimenta√ß√£o: ra√ß√£o, aveia, alfafa...; cuidados pr√≥prios: corrida, trote, cascos...)
+	- Cachorro (alimenta√ß√£o: ra√ß√£o, carnes...; cuidados pr√≥prios: tosa, banho...)
+	- P√°ssaro (alimenta√ß√£o: alpiste, frutas...; cuidados pr√≥prios: abrigo, est√≠mulos...)
 
-Exames clÌnicos
-	Exame (convÍnio, nome do mÈdico, nome do paciente)
-		Sangue (preparaÁ„o prÛpria: jejum 6h, jejum 8h, remÈdios e bebidas proibidos...)
-		Raio X (preparaÁ„o prÛpria: jejum, laxantes...)
-		Ecografia (preparaÁ„o prÛpria: jejum, bexiga cheia...)
+Exames cl√≠nicos
+- Exame (conv√™nio, nome do m√©dico, nome do paciente)
+	- Sangue (prepara√ß√£o pr√≥pria: jejum 6h, jejum 8h, rem√©dios e bebidas proibidos...)
+	- Raio X (prepara√ß√£o pr√≥pria: jejum, laxantes...)
+	- Ecografia (prepara√ß√£o pr√≥pria: jejum, bexiga cheia...)
 
 Grupo escolar
-	Estudante (matrÌcula, nome, respons·vel)
-		PrÈ-escolar (cuidados: alergias, remÈdios...)
-		Ensino fundamental (atividades de contraturno: nataÁ„o, judÙ, gin·stica...)
-		Ensino mÈdio (oficinas profissionalizantes: computaÁ„o, marcenaria, contabilidade...)
+- Estudante (matr√≠cula, nome, respons√°vel)
+	- Pr√©-escolar (cuidados: alergias, rem√©dios...)
+	- Ensino fundamental (atividades de contraturno: nata√ß√£o, jud√¥, gin√°stica...)
+	- Ensino m√©dio (oficinas profissionalizantes: computa√ß√£o, marcenaria, contabilidade...)
 
 Frota motorizada
-	VeÌculo (marca, modelo, ano, quilometragem, placa)
-		AutomÛvel (motorizaÁ„o: motor 1.0, motor, motor 1.6...)
-		Caminh„o (carga m·xima: 16 toneladas, 23 toneladas...)
-		‘nibus (assentos: 20, 40...)
+- Ve√≠culo (marca, modelo, ano, quilometragem, placa)
+	- Autom√≥vel (motoriza√ß√£o: motor 1.0, motor, motor 1.6...)
+	- Caminh√£o (carga m√°xima: 16 toneladas, 23 toneladas...)
+	- √înibus (assentos: 20, 40...)
 
-DelegaÁ„o
-	Atleta (nome, n˙mero)
-		Saltador (altura)
-		Corredor (velocidade)
-		Nadador (estilo)
+Delega√ß√£o
+- Atleta (nome, n√∫mero)
+	- Saltador (altura)
+	- Corredor (velocidade)
+	- Nadador (estilo)
 
-Loja de eletrÙnicos
-	Equipamento (nome, marca, modelo, tamanho da tela)
-		Smartphone (quantidade de chips de operadora, tamanho da tela)
-		Smartwatch (tipo de pulseira: couro, metal...)
-		Notebook (processador, memÛria RAM, disco, tamanho da tela)
+Loja de eletr√¥nicos
+- Equipamento (nome, marca, modelo, tamanho da tela)
+	- Smartphone (quantidade de chips de operadora, tamanho da tela)
+	- Smartwatch (tipo de pulseira: couro, metal...)
+	- Notebook (processador, mem√≥ria RAM, disco, tamanho da tela)
