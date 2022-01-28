@@ -32,7 +32,7 @@ public class Principal {
 
 		do {
 			menu =  "Controle de Estudantes\n\n" +
-					"Selecione uma das opções:\n\n" + 
+					"Selecione uma das opÃ§Ãµes:\n\n" + 
 					opcoesPrincipais();
 			entrada = JOptionPane.showInputDialog(menu + "\n\n");
 			opcao1 = this.retornarInteiro(entrada);
@@ -40,7 +40,7 @@ public class Principal {
 			switch (opcao1) {
 			case 1:
 				menu = 	"Cadastro de Estudantes\n\n" +
-						"Opções disponíveis:\n\n" +
+						"OpÃ§Ãµes disponÃ­veis:\n\n" +
 						opcoesEstudantes();
 				entrada = JOptionPane.showInputDialog(menu + "\n\n");
 				opcao2 = this.retornarInteiro(entrada);
@@ -55,7 +55,7 @@ public class Principal {
 				case 4: estudantes.add((Estudante)lerEnsinoSuperior());
 					break;
 				default: 
-					JOptionPane.showMessageDialog(null, "Erro! Não foi escolhida uma opção válida de tipo de estudante.");
+					JOptionPane.showMessageDialog(null, "Erro! NÃ£o foi escolhida uma opÃ§Ã£o vÃ¡lida de tipo de estudante.");
 				}
 
 				break;
@@ -72,7 +72,7 @@ public class Principal {
 				break;
 			case 3:
 				if (estudantes.size() == 0) {
-					JOptionPane.showMessageDialog(null, "Não foram encontrados estudantes cadastrados. Limpeza não efetuada.");
+					JOptionPane.showMessageDialog(null, "NÃ£o foram encontrados estudantes cadastrados. Limpeza nÃ£o efetuada.");
 					break;
 				}
 				estudantes.clear();
@@ -80,7 +80,7 @@ public class Principal {
 				break;
 			case 4:
 				if (estudantes.size() == 0) {
-					JOptionPane.showMessageDialog(null, "Primeiramente, cadastre estudantes para poder salvá-los.");
+					JOptionPane.showMessageDialog(null, "Primeiramente, cadastre estudantes para poder salvÃ¡-los.");
 					break;
 				}
 				salvarEstudantes(estudantes);
@@ -101,8 +101,8 @@ public class Principal {
 		} while (opcao1 != 9);
 	}
 	
-	/*=== RESTANTE DOS MÉTODOS ===*/
-	// Menu com as opções principais
+	/*=== RESTANTE DOS MÃ‰TODOS ===*/
+	// Menu com as opÃ§Ãµes principais
 	public String opcoesPrincipais() {
 		return 	"1. Cadastrar Estudantes\n" +
 				"2. Exibir Estudantes\n" +
@@ -112,28 +112,28 @@ public class Principal {
 				"9. Sair";
 	}
 	
-	// Menu com as opções dos tipos de estudantes
+	// Menu com as opÃ§Ãµes dos tipos de estudantes
 	public String opcoesEstudantes() {
-		return 	"1. Pré-Escolar\n" +
+		return 	"1. PrÃ©-Escolar\n" +
 				"2. Ensino Fundamental\n" +
-				"3. Ensino Médio\n" +
+				"3. Ensino MÃ©dio\n" +
 				"4. Ensino Superior";
 	}
 	
-	// Validar a opção do usuário e retornar caso seja inteiro
+	// Validar a opÃ§Ã£o do usuÃ¡rio e retornar caso seja inteiro
 	public int retornarInteiro(String entrada) {
 		if (entrada == null || "".equals(entrada)) {
-			JOptionPane.showMessageDialog(null, "Por gentileza, escolha uma opção antes.\n\nPara sair do programa, digite a opção 9.\n\n");
+			JOptionPane.showMessageDialog(null, "Por gentileza, escolha uma opÃ§Ã£o antes.\n\nPara sair do programa, digite a opÃ§Ã£o 9.\n\n");
 			return 0;
 		} else {
 			while (!this.validarInteiro(entrada)) {
-				entrada = JOptionPane.showInputDialog(null, "Erro! Não foi possível validar o número.\n\nSelecione uma das opções\n\n" + opcoesPrincipais() + "\n\n");
+				entrada = JOptionPane.showInputDialog(null, "Erro! NÃ£o foi possÃ­vel validar o nÃºmero.\n\nSelecione uma das opÃ§Ãµes\n\n" + opcoesPrincipais() + "\n\n");
 			}
 			return Integer.parseInt(entrada);
 		}
 	}
 	
-	// Validar se é inteiro
+	// Validar se Ã© inteiro
 	private boolean validarInteiro(String entrada) {
 		try {
 			Integer.parseInt(entrada);
@@ -152,47 +152,47 @@ public class Principal {
 		return dadosOut;
 	}
 	
-	// Construção do objeto PreEscolar
+	// ConstruÃ§Ã£o do objeto PreEscolar
 	public PreEscolar lerPreEscolar() {
 		String[] valoresPE = new String[4];
-		String[] nomesPE = {"a instituição de ensino", "o número da matrícula", "o nome do estudante", "o nome do responsável"};
+		String[] nomesPE = {"a instituiÃ§Ã£o de ensino", "o nÃºmero da matrÃ­cula", "o nome do estudante", "o nome do responsÃ¡vel"};
 		valoresPE = lerValores(nomesPE);
 		int matricula = this.retornarInteiro(valoresPE[1]);
 		PreEscolar preEscolar = new PreEscolar(valoresPE[0], matricula, valoresPE[2], valoresPE[3]);
 		return preEscolar;
 	}
 	
-	// Construção do objeto EnsinoFundamental
+	// ConstruÃ§Ã£o do objeto EnsinoFundamental
 	public EnsinoFundamental lerEnsinoFundamental() {
 		String[] valoresEF = new String[4];
-		String[] nomesEF = {"a instituição de ensino", "o número da matrícula", "o nome do estudante", "o nome do responsável"};
+		String[] nomesEF = {"a instituiÃ§Ã£o de ensino", "o nÃºmero da matrÃ­cula", "o nome do estudante", "o nome do responsÃ¡vel"};
 		valoresEF = lerValores(nomesEF);
 		int matricula = this.retornarInteiro(valoresEF[1]);
 		EnsinoFundamental ensinoFundamental = new EnsinoFundamental(valoresEF[0], matricula, valoresEF[2], valoresEF[3]);
 		return ensinoFundamental;
 	}
 	
-	// Construção do objeto EnsinoMedio
+	// ConstruÃ§Ã£o do objeto EnsinoMedio
 	public EnsinoMedio lerEnsinoMedio() {
 		String[] valoresEM = new String[4];
-		String[] nomesEM = {"a instituição de ensino", "o número da matrícula", "o nome do estudante", "o nome do responsável"};
+		String[] nomesEM = {"a instituiÃ§Ã£o de ensino", "o nÃºmero da matrÃ­cula", "o nome do estudante", "o nome do responsÃ¡vel"};
 		valoresEM = lerValores(nomesEM);
 		int matricula = this.retornarInteiro(valoresEM[1]);
 		EnsinoMedio ensinoMedio = new EnsinoMedio(valoresEM[0], matricula, valoresEM[2], valoresEM[3]);
 		return ensinoMedio;
 	}
 	
-	// Construção do objeto EnsinoSuperior
+	// ConstruÃ§Ã£o do objeto EnsinoSuperior
 	public EnsinoSuperior lerEnsinoSuperior() {
 		String[] valoresES = new String[4];
-		String[] nomesES = {"a instituição de ensino", "o número da matrícula", "o nome do estudante", "o nome do responsável"};
+		String[] nomesES = {"a instituiÃ§Ã£o de ensino", "o nÃºmero da matrÃ­cula", "o nome do estudante", "o nome do responsÃ¡vel"};
 		valoresES = lerValores(nomesES);
 		int matricula = this.retornarInteiro(valoresES[1]);
 		EnsinoSuperior ensinoSuperior = new EnsinoSuperior(valoresES[0], matricula, valoresES[2], valoresES[3]);
 		return ensinoSuperior;
 	}
 	
-	// Gravação dos dados
+	// GravaÃ§Ã£o dos dados
 	public void salvarEstudantes(ArrayList<Estudante> estudantes) {
 		ObjectOutputStream outputStream = null;
 		try {
@@ -201,7 +201,7 @@ public class Principal {
 				outputStream.writeObject(estudantes.get(i));
 			}
 		} catch (FileNotFoundException ex) {
-			JOptionPane.showMessageDialog(null, "Não foi possível criar o arquivo!\n\nVerifique se você possui permissão de escrita ou se a pasta está correta.");
+			JOptionPane.showMessageDialog(null, "NÃ£o foi possÃ­vel criar o arquivo!\n\nVerifique se vocÃª possui permissÃ£o de escrita ou se a pasta estÃ¡ correta.");
 			ex.printStackTrace();
 		} catch (IOException ex) {
 			ex.printStackTrace();
@@ -217,7 +217,7 @@ public class Principal {
 		}
 	}
 	
-	// Recuperação dos dados
+	// RecuperaÃ§Ã£o dos dados
 	@SuppressWarnings("finally")
 	public ArrayList<Estudante> recuperarEstudantes() {
 		ArrayList<Estudante> estudantesTemp = new ArrayList<Estudante>();
@@ -236,7 +236,7 @@ public class Principal {
 		} catch (ClassNotFoundException ex) {
 			ex.printStackTrace();
 		} catch (FileNotFoundException ex) {
-			JOptionPane.showMessageDialog(null, "Não foi encontrado arquivo salvo com estudantes!");
+			JOptionPane.showMessageDialog(null, "NÃ£o foi encontrado arquivo salvo com estudantes!");
 			ex.printStackTrace();
 		} catch (IOException ex) {
 			ex.printStackTrace();
