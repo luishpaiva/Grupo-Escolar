@@ -7,7 +7,7 @@ public class EnsinoSuperior extends Estudante {
 	
 	public EnsinoSuperior(String instituicaoEnsino, int matricula, String nome, String responsavel) {
 		super(instituicaoEnsino, matricula, nome, responsavel);
-		this.curso = JOptionPane.showInputDialog("Informe o curso de graduação:");
+		this.curso = JOptionPane.showInputDialog("Informe o curso de graduaÃ§Ã£o:");
 		this.tipo = "Ensino Superior";
 	}
 

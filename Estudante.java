@@ -18,20 +18,20 @@ public abstract class Estudante implements Serializable {
 
 	public String toString() {
 		String dadosEstudante = "";
-		dadosEstudante += "InstituiÁ„o de Ensino: \t" + this.instituicaoEnsino + "\n";
-		dadosEstudante += "MatrÌcula: \t"+ this.matricula + "\n";
+		dadosEstudante += "Institui√ß√£o de Ensino: \t" + this.instituicaoEnsino + "\n";
+		dadosEstudante += "Matr√≠cula: \t"+ this.matricula + "\n";
 		dadosEstudante += "Nome: \t" + this.nome + "\n";
-		dadosEstudante += "Respons·vel: \t" + this.responsavel + "\n";
+		dadosEstudante += "Respons√°vel: \t" + this.responsavel + "\n";
 		dadosEstudante += "Tipo de Estudante: \t" + this.tipo + "\n";
 		dadosEstudante += "Tipo de Estudo: \t" + this.estudar() + "\n";
-		if (this.tipo == "PrÈ-Escolar") {
+		if (this.tipo == "Pr√©-Escolar") {
 			dadosEstudante += "Cuidados: \t" + this.cuidados + "\n";
 		} else if (this.tipo == "Ensino Fundamental") {
 			dadosEstudante += "Atividades do Contraturno: \t" + this.atividades + "\n";
-		} else if (this.tipo == "Ensino MÈdio") {
+		} else if (this.tipo == "Ensino M√©dio") {
 			dadosEstudante += "Oficinas Profissionalizantes: \t" + this.oficinas + "\n";
 		} else {
-			dadosEstudante += "Curso de GraduaÁ„o: \t" + this.curso + "\n";
+			dadosEstudante += "Curso de Gradua√ß√£o: \t" + this.curso + "\n";
 		}
 		return dadosEstudante;
 	}

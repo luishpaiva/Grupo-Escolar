@@ -7,7 +7,7 @@ public class EnsinoFundamental extends Estudante {
 	
 	public EnsinoFundamental(String instituicaoEnsino, int matricula, String nome, String responsavel) {
 		super(instituicaoEnsino, matricula, nome, responsavel);
-		this.atividades = JOptionPane.showInputDialog("Informe as atividades de contraturno (ex.: nataÁ„o, judo, gin·stica, ...):");
+		this.atividades = JOptionPane.showInputDialog("Informe as atividades de contraturno (ex.: nata√ß√£o, judo, gin√°stica, ...):");
 		this.tipo = "Ensino Fundamental";
 	}
 

@@ -7,8 +7,8 @@ public class EnsinoMedio extends Estudante {
 	
 	public EnsinoMedio(String instituicaoEnsino, int matricula, String nome, String responsavel) {
 		super(instituicaoEnsino, matricula, nome, responsavel);
-		this.oficinas = JOptionPane.showInputDialog("Informe as oficinas profissionalizantes (ex.: computação, administração, contabilidade, ...):");
-		this.tipo = "Ensino Médio";
+		this.oficinas = JOptionPane.showInputDialog("Informe as oficinas profissionalizantes (ex.: computaÃ§Ã£o, administraÃ§Ã£o, contabilidade, ...):");
+		this.tipo = "Ensino MÃ©dio";
 	}
 	
 	public String estudar() {
